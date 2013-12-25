@@ -1,0 +1,62 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+@import "twitter/bootstrap";
+@import "font-awesome";
+
+.twitter-account {
+  position: relative;
+  margin-bottom: 10px;
+
+  img {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
+
+  .twitter-account-body {
+    a {
+      color: #222;
+      display: block;
+      padding: 5px 15px 15px 60px;
+
+      &:hover {
+        background-color: #f5f5f5;
+        text-decoration: none;
+      }
+    }
+    strong { display: block; }
+  }
+}
+
+.tweet {
+  border-bottom: 1px solid #f4f4f4;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .tweet-body {
+    margin-left: 60px;
+
+    .name { font-weight: 800; }
+    .username { color: #888; }
+    .text { display: block; }
+  }
+}
