@@ -1,5 +1,5 @@
 <div class="page-header">
-  <%= link_to image_tag(@twitter_account.image_url, class: "img-rounded pull-left"), @twitter_account %>
+  <%= image_tag(@twitter_account.image_url, class: "img-rounded pull-left") %>
   <h1>@<%= @twitter_account.username %></h1>
 </div>
 
@@ -28,11 +28,11 @@
 
     <% @twitter_account.favorited_tweets.sorted.each do |favorited_tweet| %>
       <div class="tweet">
-        <%= link_to image_tag(favorited_tweet.image_url, class: "img-rounded"), twitter_account_url(favorited_tweet.username) %>
+        <%= link_to image_tag(favorited_tweet.image_url, class: "img-rounded"), twitter_account_url(favorited_tweet.username), target: "_blank" %>
 
         <p class="tweet-body">
           <span class="pull-right"><%= link_to "#{time_ago_in_words(favorited_tweet.posted_at)} ago", tweet_url(favorited_tweet) %></span>
-          <%= link_to twitter_account_url(favorited_tweet.username) do %>
+          <%= link_to twitter_account_url(favorited_tweet.username), target: "_blank" do %>
             <span class="name"><%= favorited_tweet.name %></span>
             <span class="username">@<%= favorited_tweet.username %></span>
           <% end %>
