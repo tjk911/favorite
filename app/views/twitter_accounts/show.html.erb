@@ -34,7 +34,7 @@
   </div>
 
   <div class="col-sm-9">
-    <h4>Favorited Tweets</h4>
+    <h4>Recently Favorited Tweets</h4>
 
     <% if @twitter_account.favorited_tweets.empty? %>
       <% if @twitter_account.keywords.empty? %>
@@ -45,7 +45,7 @@
     <% end %>
 
 
-    <% @twitter_account.favorited_tweets.sorted.each do |favorited_tweet| %>
+    <% @twitter_account.favorited_tweets.recent.sorted.each do |favorited_tweet| %>
       <div class="tweet">
         <%= link_to image_tag(favorited_tweet.image_url, class: "img-rounded"), twitter_account_url(favorited_tweet.username), target: "_blank" %>
 
