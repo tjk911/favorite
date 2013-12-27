@@ -1,1 +1,21 @@
 Originally forked from Chris Oliver (excid3).
+
+== App function
+
+Searches Twitter for user-designated terms and auto-favorites tweets matching said terms to build a following.
+
+Requires own application.yml with secret token and twitter app creds (which I have neither, at the time of writing).
+
+== Current risks
+
+Searches terms, and hence includes Twitter handles as well. Terms should be as specific as possible (use "RubyonRails" instead of "Ruby" to avoid favoriting random tweets by users with "Ruby" in their handle).
+
+Should be used sparingly to avoid "favoriting" tweets haphazardly.
+
+== Potential tweaks
+
+Early use of original app by Chris (presumably private by now) shows that app does an average of three searches/favorites per-hour based on defined terms. Would be useful to sort search results by term, or narrow search to hashtags-only, or simply set app to curate/search without auto-favoriting.
+
+== Current goal
+
+Launch app on Heroku to test functionality and dig through code to figure out what does what, and subsequently implement above tweaks if possible.
