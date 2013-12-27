@@ -15,21 +15,34 @@
 @import "twitter/bootstrap";
 @import "font-awesome";
 
+.navbar-brand {
+  padding: 10px 15px;
+
+  img { height: 30px; }
+}
+
+.page-header {
+  margin-top: 0px;
+}
+
 .twitter-account {
   position: relative;
   margin-bottom: 10px;
 
   img {
     position: absolute;
-    top: 5px;
-    left: 5px;
+    top: 20px;
+    left: 20px;
   }
 
   .twitter-account-body {
     a {
       color: #222;
       display: block;
-      padding: 5px 15px 15px 60px;
+      border: 1px solid #eee;
+      border-radius: 5px;
+      padding: 20px 20px 20px 80px;
+      min-height: 88px;
 
       &:hover {
         background-color: #f5f5f5;

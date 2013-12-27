@@ -9,6 +9,11 @@ class TwitterAccountsController < ApplicationController
   def show
   end
 
+  def destroy
+    @twitter_account.destroy
+    redirect_to root_url, notice: "Account successfully deleted"
+  end
+
 private
 
   def set_twitter_account

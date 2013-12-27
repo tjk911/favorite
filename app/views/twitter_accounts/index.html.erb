@@ -6,6 +6,11 @@
   <h1>Twitter Accounts</h1>
 </div>
 
+
+<% if current_user.twitter_accounts.empty? %>
+  <div class="alert alert-success"><%= link_to "Connect a Twitter Account", user_omniauth_authorize_path(:twitter) %> to get started!</div>
+<% end %>
+
 <% current_user.twitter_accounts.each do |twitter_account| %>
   <div class="twitter-account">
     <%= link_to image_tag(twitter_account.image_url, class: "img-rounded"), twitter_account %>
@@ -17,9 +22,7 @@
         <span>
           Keywords:
           <% twitter_account.keywords.each do |keyword| %>
-            <span class="label label-default">
-              <%= keyword.text %>
-            </span>
+            <span class="label label-primary"><%= keyword.text %></span>
           <% end %>
 
         </span>
