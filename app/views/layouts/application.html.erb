@@ -11,12 +11,16 @@
 </head>
 <body>
 
-<%= render partial: "shared/navbar" %>
+  <div id="wrap">
+    <%= render partial: "shared/navbar" %>
 
-<div class="container">
-  <%= render partial: "shared/notices" %>
-  <%= yield %>
-</div>
+    <div class="container">
+      <%= render partial: "shared/notices" %>
+      <%= yield %>
+    </div>
+  </div>
+
+  <%= render partial: "shared/footer" %>
 
 </body>
 </html>
